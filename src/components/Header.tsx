@@ -10,6 +10,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import MoreIcon from "@mui/icons-material/MoreVert";
+import { Link } from "@mui/material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -129,7 +130,7 @@ export const Header = () => {
               aria-haspopup="true"
               color="inherit"
             ></IconButton>
-            <p>新規会員登録</p>
+            <Link href="registration">新規会員登録</Link>
           </MenuItem>
         </>
       )}
@@ -246,7 +247,9 @@ export const Header = () => {
                     component="div"
                     sx={{ display: { xs: "none", sm: "block" } }}
                   >
-                    新規会員登録
+                    <Link href="registration" color="inherit">
+                      新規会員登録
+                    </Link>
                   </Typography>
                 </IconButton>
               </Box>

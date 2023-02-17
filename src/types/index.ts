@@ -5,3 +5,9 @@ export interface Server {
   description: string;
   imageUrl: string;
 }
+
+export interface FormValues {
+  name: string;
+  email: string;
+  password: string;
+}
