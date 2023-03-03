@@ -13,7 +13,7 @@ interface Props {
   servers: Server[];
 }
 
-export const ServerList = (props: Props) => {
+export const JoiningServerList = (props: Props) => {
   const { servers } = props;
 
   return (
@@ -26,22 +26,22 @@ export const ServerList = (props: Props) => {
         }}
       >
         <Container maxWidth="sm">
-          <Typography
+          {/* <Typography
             component="h2"
             variant="h2"
             align="center"
             color="text.primary"
             gutterBottom
           >
-            所属サーバー
-          </Typography>
+            公開サーバー
+          </Typography> */}
           <Typography
             variant="h5"
             align="center"
-            color="text.secondary"
+            color="text.primary"
             paragraph
           >
-            所属サーバー
+            参加中のサーバー
           </Typography>
         </Container>
       </Box>
