@@ -11,14 +11,17 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-function RegistrationForm() {
+const RegistrationForm = () => {
   const theme = createTheme();
 
   const {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormValues>();
+  } = useForm<FormValues>({
+    // mode: "onChange",
+    mode: "onBlur",
+  });
 
   const onSubmit: SubmitHandler<FormValues> = async (data: FormValues) => {
     console.log(data);
@@ -137,10 +140,18 @@ function RegistrationForm() {
               </Button>
             </Box>
           </Box>
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            sx={{ mt: 3, mb: 2 }}
+          >
+            Googleアカウントで登録
+          </Button>
         </Box>
       </Container>
     </ThemeProvider>
   );
-}
+};
 
 export default RegistrationForm;

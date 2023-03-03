@@ -18,7 +18,6 @@ function Copyright() {
 export const Footer = () => {
   return (
     <>
-      {/* Footer */}
       <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
         <Typography
           variant="subtitle1"
@@ -38,7 +37,6 @@ export const Footer = () => {
         </Typography>
         <Copyright />
       </Box>
-      {/* End footer */}
     </>
   );
 };
